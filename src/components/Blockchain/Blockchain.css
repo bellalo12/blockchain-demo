@@ -1,0 +1,90 @@
+.previousHash {
+  align-items: flex-end;
+  display: grid;
+  grid-area: gridPreviousHash;
+  grid-template-areas: "labelPreviousHash previousHash";
+  grid-template-columns: 131px calc(100% - 131px);
+}
+
+.label#previousHash {
+  grid-area: labelPreviousHash;
+}
+
+.hash#previous {
+  grid-area: previousHash;
+}
+
+.hashes {
+  align-items: flex-start;
+  display: grid;
+  grid-area: gridHash;
+  grid-template-areas: "labelPresentHash presentHash";
+  grid-template-columns: 63px calc(100% - 63px);
+}
+
+.label#presentHash {
+  grid-area: labelPresentHash;
+}
+
+.hash#present {
+  grid-area: presentHash;
+}
+
+
+
+.grid3{
+  display: grid;
+  grid-area: grid3;
+  grid-template-areas: "order date";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 54px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+p#previous {
+  font-weight: 400;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+p#present {
+  font-weight: 400;
+  overflow: auto;
+  padding: 0 10px 0 10px;
+  white-space: nowrap;
+}
+
+
+.blockOrder {
+  grid-area: order;
+  padding-right: 30px;
+}
+
+.nonce {
+  grid-area: nonce;
+  justify-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-self: flex-end;
+
+}
+
+
+.blockDate{
+  align-self: flex-end;
+  grid-area: date;
+  justify-self: start;
+  margin-bottom: 4px;
+}
+.build {
+  border-radius: 50%;
+  height: 54px;
+  opacity: 0.7;
+  width: 54px;
+}

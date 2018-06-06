@@ -1,0 +1,55 @@
+.chain {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 75px auto;
+  max-width: 100%;
+
+}
+.mb4 {
+  margin-bottom: 40px;
+}
+
+.data {
+  grid-area: data;
+}
+
+.data {
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.gridData {
+  display: grid;
+  grid-area: gridData;
+  grid-template-areas: "data input";
+  grid-template-columns: 69px calc(100% - 69px);
+}
+
+.input {
+  grid-area: input;
+}
+
+.bmd-form-group {
+  align-self: center;
+  padding-top: 0;
+}
+
+.input.form-control {
+  align-self: center;
+  padding-left: 10px;
+}
+
+.lf {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-control {
+  background: none;
+}
+
+.form-control:focus {
+  background-image: linear-gradient(to top, #00bcd4 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
