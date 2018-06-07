@@ -9,7 +9,7 @@ const AddBlock = ({addBlock, addData, data})=>{
       <h5 className="card-title">Create New Block</h5>
       <div className="form-row">
       <div className="form-group col-md-2">
-        <p type="email" className="form-control">Data</p>
+        <p className="form-control bg-purple white">Data</p>
       </div>
       <div className="form-group col-md-10">
         <input type="text" className="form-control" value={data} onChange={addData} placeholder="Enter Data to Mine"/>

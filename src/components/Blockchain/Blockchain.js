@@ -73,7 +73,7 @@ class Blockchain extends React.Component{
 
  nonceOrRepairHash = () => {
     return this.verifyHash(this.state.hash)
-    ? <p className="nonce input-group-text center create shadow-5 pointer" style={{width:'80px', height:'80px'}}>{this.state.nonce}</p>
+    ? <p className="nonce input-group-text center create shadow-5 pointer bg-purple white" style={{width:'80px', height:'80px'}}>{this.state.nonce}</p>
     : <button className="nonce center input-group-text build btn pointer btn-info shadow-5" style={{width:'75px', height:'75px'}} onClick={this.repair}>build</button>
 
   }
@@ -103,7 +103,7 @@ class Blockchain extends React.Component{
         <div className="card-body">
           <div className="form-row">
           <div className="form-group col-md-2">
-            <p className="form-control">Data</p>
+            <p className="form-control bg-purple white">Data</p>
           </div>
           <div className="form-group col-md-10">
             <input type="text" className="form-control" value={this.state.data} onChange={this.onDataChange}/>

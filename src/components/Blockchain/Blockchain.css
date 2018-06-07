@@ -60,7 +60,6 @@
   border-radius: 50%;
   font-family: 'Orbitron', sans-serif;
   opacity: 0.7;
-  background:linear-gradient(to right, rgb(240, 236, 91), rgb(230, 5, 55));
 
 
 }
@@ -69,5 +68,5 @@
   border-radius: 50%;
   opacity: 0.7;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(to right, rgb(240, 236, 91), rgb(230, 5, 55));
+  background:
 }
