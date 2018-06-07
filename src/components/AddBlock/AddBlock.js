@@ -3,7 +3,7 @@ import './AddBlock.css';
 
 const AddBlock = ({addBlock, addData, data})=>{
   return(
-    <div class="card text-center ma4 center">
+    <div class="card text-center ma4 center br3 shadow-5" style={{width:'600px'}}>
 
     <div class="card-body">
       <h5 class="card-title">Create New Block</h5>
@@ -15,7 +15,7 @@ const AddBlock = ({addBlock, addData, data})=>{
         <input type="text" class="form-control" value={data} onChange={addData} placeholder="Enter Data to Mine"/>
       </div>
       </div>
-      <button class="btn btn-primary dim grow" onClick={addBlock}>Add</button>
+      <button class="card-add f5 grow no-underline br-pill ph4 pv3 pointer dib white" onClick={addBlock}> + Add New Block </button>
     </div>
 
   </div>

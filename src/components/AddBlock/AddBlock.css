@@ -1,3 +1,10 @@
-.card {
-  width :700px;
+
+
+.card-title{
+  font-family: 'Orbitron', sans-serif;
+}
+
+.card-add{
+  background:linear-gradient(to right, rgb(240, 236, 91), rgb(230, 5, 55));
+  font-family: 'Orbitron', sans-serif;
 }

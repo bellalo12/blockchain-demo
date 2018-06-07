@@ -11,6 +11,7 @@ class Blockchain extends React.Component{
    ? this.props.data
    : "Welcome to Blockchain Demo"
 
+
    this.state={
      id: this.props.id,
      date: now,
@@ -25,14 +26,16 @@ class Blockchain extends React.Component{
 
  componentDidMount(){
    const {id, date, data, previousHash} = this.state;
-   this.props.repareHash(id, date, data, previousHash, this.renderHash.bind(this), this.renderNonce.bind(this));
+   this.props.repairHash(id, date, data, previousHash, this.renderHash.bind(this), this.renderNonce.bind(this));
  }
- 
+
 
  renderHash = (pro) => {
    let params = pro;
    this.setState({hash: params.hash});
  }
+
+
 
  renderNonce = (pro) => {
    let params = pro;
@@ -42,7 +45,7 @@ class Blockchain extends React.Component{
  renderGenBlock = () => {
    const {id} = this.state;
    return id > 0
-   ? `Block #${id}`
+   ? `Block # ${id}`
    : 'Genesis Block';
  }
 
@@ -57,22 +60,21 @@ class Blockchain extends React.Component{
 
  repair = () => {
    const {id, date, data, previousHash} = this.state;
-   this.props.repareHash(id, date, data, previousHash, this.renderHash.bind(this), this.renderNonce.bind(this));
+   this.props.repairHash(id, date, data, previousHash, this.renderHash.bind(this), this.renderNonce.bind(this));
  }
 
 
  onDataChange = (event) =>
  {
-   const data = event.target.value;
-   const {id, date, previousHash, nonce} = this.state;
-   this.setState({data: data});
+   const {id, date, data, previousHash, nonce} = this.state;
+   this.setState({data: event.target.value});
    this.props.onHashChange(id, date, data, previousHash, nonce, this.renderHash.bind(this));
  }
 
  nonceOrRepairHash = () => {
     return this.verifyHash(this.state.hash)
-    ? <p className="nonce input-group-text mt3 br2 shadow-5">{this.state.nonce}</p>
-    : <p className="nonc input-group-text mt3 br2 shadow-5">{this.repair()}</p>
+    ? <p className="nonce input-group-text center create shadow-5 pointer" style={{width:'80px', height:'80px'}}>{this.state.nonce}</p>
+    : <button className="nonce center input-group-text build btn pointer btn-info shadow-5" style={{width:'75px', height:'75px'}} onClick={this.repair}>build</button>
 
   }
 
@@ -97,34 +99,34 @@ class Blockchain extends React.Component{
 
     render(){
       return(
-        <div class="card text-center ma4 center">
+        <div class="card text-center ma4 center br3 shadow-5" style={{width:'950px'}}>
         <div class="card-body">
           <div class="form-row">
           <div class="form-group col-md-2">
-            <p type="email" class="form-control">Data</p>
+            <p class="form-control">Data</p>
           </div>
           <div class="form-group col-md-10">
             <input type="text" class="form-control" value={this.state.data} onChange={this.onDataChange}/>
           </div>
 
           <div className="previousHash">
-          <p className="label" id="previousHash">Previous Hash</p>
-          <p className="hash" id="previous" style={this.colorPreviousHash(this.state.previousHash)}>{this.state.previousHash}</p>
+          <p className="f5">Previous Hash</p>
+          <p className="f5"style={this.colorPreviousHash(this.state.previousHash)}>{this.state.previousHash}</p>
         </div>
 
 
        <div className="hashes">
-         <p className="label" id="presentHash">Hash</p>
-         <p className="hash br2 underline"id="present" style={this.colorHash(this.state.hash)}>{this.state.hash}</p>
+         <p className="f5" id="presentHash">Hash</p>
+         <p className="f5 br2 underline"id="present" style={this.colorHash(this.state.hash)}>{this.state.hash}</p>
        </div>
 
 
            <div class="input-group mb-3">
            <div className="grid3">
              <p className="blockOrder f2 title pa2">{this.renderGenBlock()}</p>
-             <p className="blockDate">on {this.state.date}</p>
+             <p className="blockDate f5">on {this.state.date}</p>
            </div>
-           <div className='pa1'>
+           <div className='ph5'>
               {this.nonceOrRepairHash()}
           </div>
          </div>

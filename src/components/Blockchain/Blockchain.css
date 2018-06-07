@@ -1,17 +1,15 @@
+.form-control {
+  font-family: 'Orbitron', sans-serif;
+}
+
+
 .previousHash {
   align-items: flex-end;
   display: grid;
   grid-area: gridPreviousHash;
   grid-template-areas: "labelPreviousHash previousHash";
-  grid-template-columns: 131px calc(100% - 131px);
-}
-
-.label#previousHash {
-  grid-area: labelPreviousHash;
-}
-
-.hash#previous {
-  grid-area: previousHash;
+  grid-template-columns: 130px calc(100% - 130px);
+  font-family: 'Orbitron', sans-serif;
 }
 
 .hashes {
@@ -19,18 +17,9 @@
   display: grid;
   grid-area: gridHash;
   grid-template-areas: "labelPresentHash presentHash";
-  grid-template-columns: 63px calc(100% - 63px);
+  grid-template-columns: 130px calc(100% - 130px);
+  font-family: 'Orbitron', sans-serif;
 }
-
-.label#presentHash {
-  grid-area: labelPresentHash;
-}
-
-.hash#present {
-  grid-area: presentHash;
-}
-
-
 
 .grid3{
   display: grid;
@@ -42,28 +31,11 @@
   white-space: nowrap;
 }
 
-.label {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-p#previous {
-  font-weight: 400;
-  overflow: auto;
-  white-space: nowrap;
-}
-
-p#present {
-  font-weight: 400;
-  overflow: auto;
-  padding: 0 10px 0 10px;
-  white-space: nowrap;
-}
-
 
 .blockOrder {
   grid-area: order;
   padding-right: 30px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .nonce {
@@ -81,10 +53,21 @@ p#present {
   grid-area: date;
   justify-self: start;
   margin-bottom: 4px;
+  font-family: 'Orbitron', sans-serif;
 }
+
+.create {
+  border-radius: 50%;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0.7;
+  background:linear-gradient(to right, rgb(240, 236, 91), rgb(230, 5, 55));
+
+
+}
+
 .build {
   border-radius: 50%;
-  height: 54px;
   opacity: 0.7;
-  width: 54px;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to right, rgb(240, 236, 91), rgb(230, 5, 55));
 }

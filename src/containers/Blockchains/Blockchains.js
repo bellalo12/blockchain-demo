@@ -19,10 +19,19 @@ class Blockchains extends Component {
   createBlockchains = () => {
     const {number} = this.state;
     let vue = [];
-    vue.push(<Blockchain key={0}  id={0} repareHash={this.repareHash.bind(this)} previousHash={0} onHashChange={this.onHashChange.bind(this)}/>);
+    vue.push(<Blockchain
+      key={0}
+      id={0}
+      repairHash={this.repairHash.bind(this)}
+      previousHash={0}
+      onHashChange={this.onHashChange.bind(this)}/>);
     for(let i = 1; i < number; i++) {
-      vue.push(<i className="material-icons mb4" key={`icon${i}`}></i>);
-      vue.push(<Blockchain key={i} id={i} repareHash={this.repareHash.bind(this)} previousHash={this.state.hashes[i-1]} onHashChange={this.onHashChange.bind(this)} data={this.state.data}/>);
+      vue.push(<Blockchain
+        key={i} id={i}
+        repairHash={this.repairHash.bind(this)}
+        previousHash={this.state.hashes[i-1]}
+        onHashChange={this.onHashChange.bind(this)}
+        data={this.state.data}/>);
     }
     return vue;
   }
@@ -31,18 +40,18 @@ class Blockchains extends Component {
     this.setState({number: this.state.number+1});
   }
 
-  addData = (data) => {
-    this.setState({data: data.target.value});
+  addData = (event) => {
+    this.setState({data: event.target.value});
   }
 
-  repareHash = (id, date, data, previousHash, renderHash, renderNonce) => {
+  repairHash = (id, date, data, previousHash, renderHash, renderNonce) => {
     let nonce = 0;
     let hash = this.createHash(date, data, previousHash, nonce);
     while(hash.substring(0, 4) !== '0000') {
       nonce++;
       hash = this.createHash(date, data, previousHash, nonce);
     }
-    console.log('repare', id, date, data, previousHash, nonce);
+    console.log('repair', id, date, data, previousHash, nonce);
     let hashes = this.state.hashes;
     hashes[id] = hash;
     renderHash({hash: hash});
