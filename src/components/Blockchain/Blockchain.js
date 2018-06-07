@@ -99,14 +99,14 @@ class Blockchain extends React.Component{
 
     render(){
       return(
-        <div class="card text-center ma4 center br3 shadow-5" style={{width:'950px'}}>
-        <div class="card-body">
-          <div class="form-row">
-          <div class="form-group col-md-2">
-            <p class="form-control">Data</p>
+        <div className="card text-center ma4 center br3 shadow-5" style={{width:'950px'}}>
+        <div className="card-body">
+          <div className="form-row">
+          <div className="form-group col-md-2">
+            <p className="form-control">Data</p>
           </div>
-          <div class="form-group col-md-10">
-            <input type="text" class="form-control" value={this.state.data} onChange={this.onDataChange}/>
+          <div className="form-group col-md-10">
+            <input type="text" className="form-control" value={this.state.data} onChange={this.onDataChange}/>
           </div>
 
           <div className="previousHash">
@@ -121,7 +121,7 @@ class Blockchain extends React.Component{
        </div>
 
 
-           <div class="input-group mb-3">
+           <div className="input-group mb-3">
            <div className="grid3">
              <p className="blockOrder f2 title pa2">{this.renderGenBlock()}</p>
              <p className="blockDate f5">on {this.state.date}</p>
