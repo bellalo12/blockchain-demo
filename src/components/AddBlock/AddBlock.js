@@ -4,7 +4,7 @@ import './AddBlock.css';
 const AddBlock = ({addBlock, addData, data})=>{
   return(
     <div className="card text-center ma4 center br2 shadow-5" style={{width:'600px'}}>
-    <div className='card-header white bg-info f4'>
+    <div className='card-header white bg-info f3'>
     Create New Block
     </div>
     <div className="card-body">
