@@ -102,15 +102,15 @@ class Blockchain extends React.Component{
 
     render(){
       return(
-        <div className="card text-center ma4 center br2 shadow-5" style={{width:'950px'}}>
-        <div className='card-header bg-info'>
+        <div className="card text-center ma4 center shadow-5" style={{width:'950px'}}>
+        <div className='card-header bg-danger center br3 shadow-5'style={{width:'800px'}}>
         <p className=" f1 center title pa2 white">{this.renderGenBlock()}</p>
         </div>
         <div className="card-body">
           <div className="form-row">
-          <div className="input-group mb-3">
-           <div className="input-group-prepend">
-             <span className="input-group-text white bg-info">Data</span>
+          <div className="input-group pa4">
+           <div className="input-group-prepend input-data">
+             <span className="input-group-text center bg-warning" style={{width:'75px'}}>Data</span>
            </div>
            <input type="text" className="form-control" value={this.state.data} onChange={this.onDataChange}/>
          </div>

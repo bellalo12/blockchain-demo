@@ -2,22 +2,20 @@
   font-family: 'Orbitron', sans-serif;
 }
 
-
 .previousHash {
   align-items: flex-end;
   display: grid;
-  grid-area: gridPreviousHash;
   grid-template-areas: "labelPreviousHash previousHash";
-  grid-template-columns: 130px calc(100% - 130px);
+  grid-template-columns: 120px calc(100% - 120px);
   font-family: 'Orbitron', sans-serif;
 }
 
 .hashes {
-  align-items: flex-start;
+  align-items: flex-end;
   display: grid;
   grid-area: gridHash;
   grid-template-areas: "labelPresentHash presentHash";
-  grid-template-columns: 130px calc(100% - 130px);
+  grid-template-columns: 120px calc(100% - 120px);
   font-family: 'Orbitron', sans-serif;
 }
 
