@@ -2,10 +2,10 @@
   text-align: center;
 }
 
-.title {
-    font-family: 'Catamaran', sans-serif;
+h1 {
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-    color: grey;
+    color: rgb(68, 74, 74);
 }
 
 .center {

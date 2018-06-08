@@ -50,14 +50,14 @@ class App extends Component {
         <Particles className="particles"
           params={particlesOptions}
         />
-        <nav class="pa3 pa4-ns">
-         <p class="link dim black b f1 f-headline-ns tc db mb3 mb4-ns light-gray" title="Home">Blockchain Demo</p>
+        <nav className="pa3 pa4-ns">
+         <h1 className="link dim b f1 f-headline-ns tc db mb3 mb4-ns" >Blockchain Demo</h1>
         </nav>
         <div>
           <Blockchains />
         </div>
-        <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
-        <small class="f6 db tc">© 2018 <b class="ttu">YIFANG LO</b>, All Rights Reserved</small>
+        <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
+        <small className="f6 db tc">© 2018 <b className="ttu">YIFANG LO</b>, All Rights Reserved</small>
         </footer>
       </div>
     );

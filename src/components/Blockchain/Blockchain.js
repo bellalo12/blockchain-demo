@@ -97,39 +97,45 @@ class Blockchain extends React.Component{
  }
 
 
+
+
+
     render(){
       return(
-        <div className="card text-center ma4 center br3 shadow-5" style={{width:'950px'}}>
+        <div className="card text-center ma4 center br2 shadow-5" style={{width:'950px'}}>
+        <div className='card-header bg-info'>
+        <p className=" f1 center title pa2 white">{this.renderGenBlock()}</p>
+        </div>
         <div className="card-body">
           <div className="form-row">
-          <div className="form-group col-md-2">
-            <p className="form-control bg-purple white">Data</p>
-          </div>
-          <div className="form-group col-md-10">
-            <input type="text" className="form-control" value={this.state.data} onChange={this.onDataChange}/>
-          </div>
+          <div className="input-group mb-3">
+           <div className="input-group-prepend">
+             <span className="input-group-text white bg-info">Data</span>
+           </div>
+           <input type="text" className="form-control" value={this.state.data} onChange={this.onDataChange}/>
+         </div>
 
-          <div className="previousHash">
+          <div className='input-group'>
+          <div className="previousHash input-group-prepend">
           <p className="f5">Previous Hash</p>
           <p className="f5"style={this.colorPreviousHash(this.state.previousHash)}>{this.state.previousHash}</p>
         </div>
-
+        </div>
 
        <div className="hashes">
          <p className="f5" id="presentHash">Hash</p>
-         <p className="f5 br2 underline"id="present" style={this.colorHash(this.state.hash)}>{this.state.hash}</p>
+         <p className="f5 br2"id="present" style={this.colorHash(this.state.hash)}>{this.state.hash}</p>
        </div>
 
 
            <div className="input-group mb-3">
-           <div className="grid3">
-             <p className="blockOrder f2 title pa2">{this.renderGenBlock()}</p>
-             <p className="blockDate f5">on {this.state.date}</p>
-           </div>
-           <div className='ph5'>
-              {this.nonceOrRepairHash()}
+           <div className='center'>
+             {this.nonceOrRepairHash()}
           </div>
-         </div>
+             <p className="blockDate center f5">on {this.state.date}</p>
+           </div>
+
+
           </div>
           </div>
 
