@@ -103,28 +103,28 @@ class Blockchain extends React.Component{
     render(){
       return(
         <div className="card text-center ma4 center shadow-5" style={{width:'950px'}}>
-        <div className='card-header bg-danger center br3 shadow-5'style={{width:'800px'}}>
-        <p className=" f1 center title pa2 white">{this.renderGenBlock()}</p>
+        <div className='card-header animated fadeInRight bg-danger center br3 shadow-5'style={{width:'950px'}}>
+        <p className="f1 blockLetter center title pa2 white">{this.renderGenBlock()}</p>
         </div>
         <div className="card-body">
           <div className="form-row">
           <div className="input-group pa4">
            <div className="input-group-prepend input-data">
-             <span className="input-group-text center bg-warning" style={{width:'75px'}}>Data</span>
+             <span className="input-group-text f4 center bg-warning" style={{width:'75px'}}>Data</span>
            </div>
-           <input type="text" className="form-control" value={this.state.data} onChange={this.onDataChange}/>
+           <input type="text" className="form-control f4" value={this.state.data} onChange={this.onDataChange}/>
          </div>
 
           <div className='input-group'>
           <div className="previousHash input-group-prepend">
-          <p className="f5">Previous Hash</p>
-          <p className="f5"style={this.colorPreviousHash(this.state.previousHash)}>{this.state.previousHash}</p>
+          <p className="f3">Previous Hash</p>
+          <p className="f3"style={this.colorPreviousHash(this.state.previousHash)}>{this.state.previousHash}</p>
         </div>
         </div>
 
        <div className="hashes">
-         <p className="f5" id="presentHash">Hash</p>
-         <p className="f5 br2"id="present" style={this.colorHash(this.state.hash)}>{this.state.hash}</p>
+         <p className="f3" id="presentHash">Hash</p>
+         <p className="f3 br2"id="present" style={this.colorHash(this.state.hash)}>{this.state.hash}</p>
        </div>
 
 
@@ -132,7 +132,7 @@ class Blockchain extends React.Component{
            <div className='center'>
              {this.nonceOrRepairHash()}
           </div>
-             <p className="blockDate center f5">on {this.state.date}</p>
+             <p className="blockDate center f4">on {this.state.date}</p>
            </div>
 
 

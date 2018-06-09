@@ -1,8 +1,22 @@
 
 body {
-    font-family: 'Orbitron', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .card-add {
-    font-family: 'Orbitron', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.3rem;
+}
+
+.card-header {
+  letter-spacing: 0.4rem;
+}
+
+.input-group-text {
+  letter-spacing: 0.2rem;
+}
+
+.form-control {
+  letter-spacing: 0.2rem;
+  font-family: 'Source Sans Pro', sans-serif;
 }

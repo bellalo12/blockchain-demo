@@ -51,7 +51,7 @@ class App extends Component {
           params={particlesOptions}
         />
         <nav className="pa3 pa4-ns">
-         <h1 className="link dim b f1 f-headline-ns tc db mb3 mb4-ns" >Blockchain Demo</h1>
+         <h1 className="link dim  f1 f-headline-ns tc db mb3 mb4-ns animated swing" >Blockchain Demo</h1>
         </nav>
         <div>
           <Blockchains />

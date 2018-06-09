@@ -3,9 +3,9 @@
 }
 
 h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
     color: rgb(68, 74, 74);
+    letter-spacing: 0.5rem;
 }
 
 .center {
